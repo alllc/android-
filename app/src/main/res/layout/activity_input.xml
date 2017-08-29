@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alexliu.finalproject.InputActivity"
+    android:background="#FFFFFF">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tableLayout4">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/imageButto1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/homegrey1"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="resultPage" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/incomegrey"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="incomePage" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/expensegrey"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="expensePage" />
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/noteblue"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="inputPage" />
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/settinggrey"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="settingPage" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/tableLayout4"
+        android:padding="20dp">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select type"
+                android:id="@+id/textView"
+                android:layout_column="0"
+                android:textColor="@color/colorLightGrey"
+                android:layout_gravity="left|center"
+                android:textSize="12sp"/>
+
+            <Spinner
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputSpinner"
+                android:layout_column="1"
+                android:paddingLeft="15dp"
+                android:entries="@array/input_type"
+                android:layout_gravity="left|center" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On"
+                android:id="@+id/textView0"
+                android:layout_column="0"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="left|center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="Select category"
+                android:id="@+id/textView2"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorLightGrey"
+                android:layout_gravity="left|center"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/typeSpinner"
+                android:layout_column="1"
+                android:paddingLeft="15dp"
+                android:layout_gravity="left|center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="Input Name"
+                android:id="@+id/textView3"
+                android:layout_column="0"
+                android:layout_gravity="left|center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/nameEditTxt"
+                android:layout_column="1"
+                android:hint="Name"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:imeOptions="actionDone"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="Amount"
+                android:id="@+id/textView4"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:textColor="@color/colorPrimary"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/amountEditTxt"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:imeOptions="actionDone"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="Date"
+                android:id="@+id/textView5"
+                android:layout_column="0"
+                android:layout_gravity="left|center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorPrimary"/>
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/dateEditTxt"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20">
+
+            <TextView
+                android:text="Photo"
+                android:id="@+id/textView7"
+                android:layout_column="0"
+                android:layout_gravity="left|center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorPrimary"/>
+            <LinearLayout
+                android:layout_column="1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+                <Button
+                    android:text="Select"
+                    android:id="@+id/imgButton"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:textSize="10sp"
+                    android:onClick="takeImageFromCamera"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorLightGrey"
+                    android:textColor="@color/colorWhite"
+                    android:layout_gravity="center"/>
+                <ImageView
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/preview"/>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="15">
+
+            <Button
+                android:text="Submit"
+                android:id="@+id/submitButton"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="submitButton"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"/>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

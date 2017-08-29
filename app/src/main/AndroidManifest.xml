@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alexliu.finalproject">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait">
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-feature android:name="android.hardware.camera" />
+        <activity android:name=".MainActivity"
+            android:label="@string/result_page">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/detail_page">
+        </activity>
+        <activity
+            android:name=".ExpenseActivity"
+            android:label="@string/expense_page">
+        </activity>
+        <activity
+            android:name=".IncomeActivity"
+            android:label="@string/income_page">
+        </activity>
+        <activity
+            android:name=".InputActivity"
+            android:label="@string/input_page">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/log_in_page">
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/register_page">
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/setting_page">
+        </activity>
+        <activity
+            android:name=".TypeEditActivity"
+            android:label="@string/typeedit_page">
+        </activity>
+        <activity
+            android:name=".PreviousActivity"
+            android:label="@string/previous_page">
+        </activity>
+        <activity
+            android:name=".AddActivity"
+            android:label="@string/adding_page">
+        </activity>
+        <activity
+            android:name=".AddActivity2"
+            android:label="@string/adding_page">
+        </activity>
+    </application>
+
+</manifest>

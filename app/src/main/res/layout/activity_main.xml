@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.alexliu.finalproject.MainActivity"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/MonthView"
+        android:textSize="20dp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorLightGrey"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:id="@+id/tableLayout"
+        android:layout_below="@+id/MonthView"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Income"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/incomeTxtView"
+                android:layout_weight="1"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/incomeNumTxt"
+                android:layout_column="1"
+                android:layout_weight="2"
+                android:text="$0"
+                android:gravity="right" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorLightGrey"
+            android:layout_margin="10dp"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Expense"
+                android:id="@+id/expenseTxt"
+                android:layout_weight="1"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/expenseNumTxt"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:text="$0"
+                android:gravity="right" />
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorLightGrey"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/resultNumTxt"
+                android:layout_column="1"
+                android:layout_weight="2"
+                android:text="$0"
+                android:gravity="right"
+                android:layout_span="2" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tableLayout6">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/imageButto1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/homeblue"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="resultPage" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/incomegrey"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="incomePage" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/expensegrey"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="expensePage" />
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/notegrey"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="inputPage" />
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/settinggrey"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:onClick="settingPage" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </TableLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/spread_bar_chart"
+        android:layout_above="@+id/tableLayout6"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/tableLayout" />
+
+</RelativeLayout>

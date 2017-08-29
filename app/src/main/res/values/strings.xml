@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Qui Qui</string>
+    <string name="log_in_page">Log In</string>
+    <string name="register_page">Sign Up</string>
+    <string name="input_page">Note</string>
+    <string name="detail_page">Detail</string>
+    <string name="result_page">Home</string>
+    <string name="setting_page">Setting</string>
+    <string name="income_page">Income</string>
+    <string name="expense_page">Expense</string>
+    <string name="typeedit_page">Type Editing</string>
+    <string name="location_page">Location</string>
+    <string name="previous_page">Previous</string>
+    <string name="adding_page">Adding</string>
+</resources>
